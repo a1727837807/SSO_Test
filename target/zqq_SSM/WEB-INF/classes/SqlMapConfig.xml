@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+   <!-- &lt;!&ndash;配置properties&ndash;&gt;
+    &lt;!&ndash;    <properties>
+            <property name="driver" value="com.mysql.jdbc.Driver"></property>
+            <property name="url" value="jdbc:mysql://localhost:3306/eesy_mybatis"></property>
+            <property name="username" value="root"></property>
+            <property name="password" value="1234"></property>
+        </properties>&ndash;&gt;
+    &lt;!&ndash;配置环境&ndash;&gt;
+    <environments default="mysql">
+        &lt;!&ndash; 配置mysql的环境&ndash;&gt;
+        <environment id="mysql">
+            &lt;!&ndash; 配置事务 &ndash;&gt;
+            <transactionManager type="JDBC"/>
+
+            &lt;!&ndash;配置连接池&ndash;&gt;
+            <dataSource type="POOLED">
+                &lt;!&ndash;       <property name="driver" value="${driver}"></property>
+                       <property name="url" value="${url}"></property>
+                       <property name="username" value="${username}"></property>
+                       <property name="password" value="${password}"></property>&ndash;&gt;
+                <property name="driver" value="com.mysql.jdbc.Driver"/>
+                <property name="url" value="jdbc:mysql:///ssm"/>
+                <property name="username" value="root"/>
+                <property name="password" value="1999507"/>
+            </dataSource>
+        </environment>
+    </environments>-->
+    <!-- 配置映射文件的位置 -->
+    <mappers>
+        <package name="cn.zqq.Dao"/>
+    </mappers>
+</configuration>

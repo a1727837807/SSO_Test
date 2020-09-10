@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+       http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context-4.0.xsd
+       http://www.springframework.org/schema/mvc
+       http://www.springframework.org/schema/mvc/spring-mvc-4.0.xsd">
+    <!--开启注解扫描,扫描Controller-->
+    <context:component-scan base-package="cn.zqq.Controller,cn.zqq.exception"/>
+    <!--视图解析器-->
+    <bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <property name="prefix" value="/pages/"/>
+        <property name="suffix" value=".jsp"/>
+    </bean>
+    <!--属性编辑器-->
+   <!-- <bean class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter">
+        <property name="webBindingInitializer" ref="myInitializer"/>
+    </bean>
+    <bean class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping"/>
+    <bean id="myInitializer" class="org.springframework.web.bind.support.ConfigurableWebBindingInitializer">
+        <property name="propertyEditorRegistrar">
+                <bean class="cn.zqq.Controller.MyPropertyRegistrar"/>
+        </property>
+    </bean>-->
+    <!--异常处理器、文件上传解析器、拦截器等-->
+   <!-- <mvc:interceptors>
+        <mvc:interceptor>
+            <mvc:mapping path="/*"/>
+            <mvc:exclude-mapping path="/employee/find*"/>
+            <mvc:exclude-mapping path="/employee/delete*"/>
+            <bean class="cn.zqq.Controller.MyInterceptor"/>
+        </mvc:interceptor>
+    </mvc:interceptors>
+    &lt;!&ndash;mvc注解支持&ndash;&gt;
+    <mvc:annotation-driven/>-->
+
+</beans>
