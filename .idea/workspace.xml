@@ -21,6 +21,9 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
     <option name="FILTER_WARNINGS" value="false" />
@@ -222,7 +225,7 @@
       <option name="presentableId" value="Default" />
       <updated>1599611057076</updated>
       <workItem from="1599611058484" duration="31269000" />
-      <workItem from="1599700798352" duration="740000" />
+      <workItem from="1599700798352" duration="1268000" />
     </task>
     <servers />
   </component>
